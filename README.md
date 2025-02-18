@@ -11,7 +11,8 @@ https://github.com/apache/cassandra/blob/cassandra-4.1/src/java/org/apache/cassa
 
 ## Command help:
 
-```python read_commit_log.py -h
+```
+$ python read_commit_log.py -h
 usage: read_commit_log.py [-h] [-s | -f] [-t TABLE_FILE_NAME] [-u] file_path
 
 positional arguments:
