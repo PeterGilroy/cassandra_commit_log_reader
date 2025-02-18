@@ -8,12 +8,16 @@ import datetime
 
 # Set the list of default system tables that have the same uuid
 def set_system_tables():
-    system_tables_data = [['system_auth', 'network_permissions', 'd46780c2-2f1c-3db9-b4c1-b8d9fbc0cc23'], 
+    system_tables_data = [['system_auth', 'cidr_groups', '9c48af00-13f6-3059-bb0e-8fcabba6eecb'],
+                          ['system_auth', 'cidr_permissions', 'b8b43d5f-d6c0-331c-8f7d-765ea658f4c4'],
+                          ['system_auth', 'identity_to_role', '0bd47a48-d6ba-3c8e-b442-0f6349329bda'],
+                          ['system_auth', 'network_permissions', 'd46780c2-2f1c-3db9-b4c1-b8d9fbc0cc23'],
                           ['system_auth', 'resource_role_permissons_index', '5f2fbdad-91f1-3946-bd25-d5da3a5c35ec'], 
                           ['system_auth', 'role_members', '0ecdaa87-f8fb-3e60-88d1-74fb36fe5c0d'], 
                           ['system_auth', 'role_permissions', '3afbe79f-2194-31a7-add7-f5ab90d8ec9c'], 
                           ['system_auth', 'roles', '5bc52802-de25-35ed-aeab-188eecebb090'], 
-                          ['system_schema', 'aggregates', '924c5587-2e3a-345b-b10c-12f37c1ba895'], 
+                          ['system_schema', 'aggregates', '924c5587-2e3a-345b-b10c-12f37c1ba895'],
+                          ['system_schema', 'column_masks', '738cc5ed-0168-3268-b9d1-853d4bc278af'],
                           ['system_schema', 'columns', '24101c25-a2ae-3af7-87c1-b40ee1aca33f'], 
                           ['system_schema', 'dropped_columns', '5e7583b5-f3f4-3af1-9a39-b7e1d6f5f11f'], 
                           ['system_schema', 'functions', '96489b79-80be-3e14-a701-66a0b9159450'], 
@@ -367,7 +371,7 @@ def read_commit_log(file_path):
                         partition_data = "n/a"
     
     
-                    if version == 7:
+                    if version == 7 or version == 8:
                         key_size_raw = mutation_body[17]
                         key_size = key_size_raw + 1
                         key = mutation_body[18:17 + key_size]
