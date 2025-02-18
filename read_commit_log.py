@@ -208,7 +208,7 @@ def check_deletion(new_mutation):
     is_deletion_true = False
     num_elements = new_mutation[0]
     # deletion marks with \xad
-    if num_elements == 173:
+    if num_elements == 173 or num_elements == 180:
         is_deletion_true = True
         new_mutation = new_mutation[4:]
         formatted_mutation = "Deletion - " + str(new_mutation)
