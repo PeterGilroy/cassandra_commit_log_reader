@@ -1,4 +1,4 @@
-python read_commit_log.py -h
+```python read_commit_log.py -h
 usage: read_commit_log.py [-h] [-s | -f] [-t TABLE_FILE_NAME] [-u] file_path
 
 positional arguments:
@@ -12,3 +12,4 @@ optional arguments:
                         Resolve the table ID to the table name. Provide a file name containing the keyspace, table and UUID of the table. Command
                         to do this is: cqlsh -e "copy system_schema.tables (keyspace_name,table_name,id) to 'tables.out' with header=false;"
   -u, --user            Only output non-system keyspace mutations and summary information.
+```
