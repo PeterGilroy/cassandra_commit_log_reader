@@ -7,7 +7,11 @@ https://cassandra.apache.org/_/blog/Learn-How-CommitLog-Works-in-Apache-Cassandr
 
 and the Cassandra source code:
 
+https://github.com/apache/cassandra/blob/cassandra-4.1/src/java/org/apache/cassandra/db/commitlog/CommitLogDescriptor.java
+
 https://github.com/apache/cassandra/blob/cassandra-4.1/src/java/org/apache/cassandra/db/Mutation.java
+
+
 
 ## Command help:
 
