@@ -1,6 +1,13 @@
 # A Cassandra commitlog reader created in python
 This can be used to read the commitlogs created by Cassandra 3.11, 4.x and DSE 5.1, 6.8, 6.9.
 
+This command was created with the help of the following article on the layout of the commitlogs:
+
+https://cassandra.apache.org/_/blog/Learn-How-CommitLog-Works-in-Apache-Cassandra.html
+
+and the Cassandra source code:
+
+https://github.com/apache/cassandra/blob/cassandra-4.1/src/java/org/apache/cassandra/db/Mutation.java
 
 ## Command help:
 
@@ -246,7 +253,7 @@ create table peter.peter1 (c1 int primary key, c2 text) ;
 create table peter.peter2 (c1 int, c2 text, primary key (c1,c2)) ;
 ```
 
-## Limitations
+## Limitations:
 This only reads commitlogs that are not encrypted and not compressed.
 
 Extra formatting is only performed on mutations on simple tables without a clustering column.
