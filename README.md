@@ -261,4 +261,4 @@ create table peter.peter2 (c1 int, c2 text, primary key (c1,c2)) ;
 ## Limitations:
 This only reads commitlogs that are not encrypted and not compressed.
 
-Extra formatting is only performed on mutations on simple tables without a clustering column.
+Extra formatting is only performed on mutations on simple tables without a clustering column for version 7 commitlogs.
